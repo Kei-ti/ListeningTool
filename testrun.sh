@@ -1,5 +1,3 @@
-#!/bin/csh -f
-
 echo "1. prepare listfiles and wavfiles"
 python bin/python/list.py --XAB -d data/wav/X data/wav/A data/wav/B -e wav -o configure/list/XAB_sample_audio.list
 python bin/python/list.py --XAB -d data/img/X data/img/A data/img/B -e jpg -o configure/list/XAB_sample_image.list
