@@ -41,11 +41,13 @@ The option `-d` specifies the directory to search json files generated in step. 
 
 ## Step. 4
 Launch listening test server with port `PORT`.
-Then, open the displayed URL in your browser (recommendation: chrome, safari).
+
+Then, open the displayed URL + `ZZZ.html` in your browser (recommendation: chrome, safari).
 
 For example:
 ```
 python ./bin/python/server.py --port 8000
+-> http://127.0.0.1:8000/ZZZ.html
 ```
 
 ## Step. 5 (After listening)
