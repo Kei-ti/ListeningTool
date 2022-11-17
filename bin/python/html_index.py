@@ -11,7 +11,7 @@ import numpy as np
 import argparse
 
 from html_template import HTML
-from configure import load_jsonfile
+from configure import load_jsonfile 
 
 def walk_files_with(extension, directory='.'):
     """Generate paths of all files that has specific extension in a directory. 
