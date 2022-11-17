@@ -33,7 +33,7 @@ def header():
     html = ['<!DOCTYPE html>',
             '<html>',
             '<head>',
-            '<meta charset=“utf-8″>',
+            '<meta charset="utf-8">',
             '<title>Start page</title>',
             '<script type="text/javascript" src="/bin/javascript/browser.js"></script>',
             '</head>',

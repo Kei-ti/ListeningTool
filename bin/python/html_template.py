@@ -48,7 +48,7 @@ class HTML():
         if outf != "":
             if os.path.dirname(outf) not in ["", "."]:
                 os.makedirs(os.path.dirname(outf), exist_ok=True)
-            out=codecs.open(outf, "w", 'utf-8')
+            out=codecs.open(outf, "w", "utf-8")
         else:
             out=sys.stdout
 
