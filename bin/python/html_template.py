@@ -5,10 +5,16 @@ __author__ = 'Keiti, Kou Tanaka'
 __version__ = '1.0'
 __license__ = __author__
 
+import io
 import os
 import sys
 import codecs
 import numpy as np
+
+import platform
+
+if platform.system() == 'Windows':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 ##############################################
 ###              HTML TEMPLATE             ###
@@ -66,7 +72,7 @@ class HTML():
             ['<!DOCTYPE html>',
              '<html>'
              '<head>'
-             '<meta charset=“utf-8″>',
+             '<meta charset="utf-8">',
              '<title>{}</title>'.format(self.title),
              '<STYLE type="text/css"><!--']
         self._style()
