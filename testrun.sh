@@ -21,7 +21,7 @@ echo "3. create an index html page, based on files of configure"
 python ./bin/python/html_index.py -d configure -o index.html
 
 echo "4. launch CGI server"
-python ./bin/python/server.py --port 8000
+python ./bin/python/server.py --port 8000 --thread
 
 echo "5. after evaluations, look at result dir"
 
