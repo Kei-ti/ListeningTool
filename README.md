@@ -50,6 +50,9 @@ python ./bin/python/server.py --port 8000
 -> http://127.0.0.1:8000/ZZZ.html
 ```
 
+Warning: For Windows, the oprion `--thread` is required because the ForkingMixIn class is not available on Windows because there is no fork() on Windows.
+https://docs.python.org/3.6/library/socketserver.html#socketserver.ForkingMixIn
+
 ## Step. 5 (After listening)
 Look a result directory, `./result`
 
