@@ -70,8 +70,8 @@ class HTML():
 
         self.html += \
             ['<!DOCTYPE html>',
-             '<html>'
-             '<head>'
+             '<html>',
+             '<head>',
              '<meta charset="utf-8">',
              '<title>{}</title>'.format(self.title),
              '<STYLE type="text/css"><!--']
