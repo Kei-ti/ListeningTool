@@ -13,9 +13,6 @@ import numpy as np
 
 import platform
 
-if platform.system() == 'Windows':
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
 ##############################################
 ###              HTML TEMPLATE             ###
 ##############################################
@@ -56,7 +53,10 @@ class HTML():
                 os.makedirs(os.path.dirname(outf), exist_ok=True)
             out=codecs.open(outf, "w", "utf-8")
         else:
-            out=sys.stdout
+            if platform.system() == 'Windows':
+                out=io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+            else:
+                out=sys.stdout
 
         for html in self.html:
             print(html, file=out)
