@@ -58,7 +58,7 @@ def main(confdir, outf):
     html.html += header()
 
     html.html += ['<form action="/bin/python/html.py" method="post">']
-    for i, jsonfile in enumerate(walk_files_with("json", directory=confdir)):
+    for i, jsonfile in enumerate(sorted(walk_files_with("json", directory=confdir))):
         html.html += ['  <input type="radio" name="jsonfile" value="{}" required/>{}<br>'.format(jsonfile, os.path.basename(os.path.splitext(jsonfile)[0]))]
 
     html.html += ['  <input type="hidden" name="index" value="0"/>',
